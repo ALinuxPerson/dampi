@@ -1,7 +1,7 @@
 /* ── Profile / Financial Assistance Screen ────────────────── */
 
 .profile {
-  background: var(--dampi-cream);
+  background: transparent;
   min-height: 100vh;
   padding: 0 20px;
   color: var(--dampi-text);
@@ -21,7 +21,11 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: var(--dampi-teal);
+  background:
+    radial-gradient(circle at 30% 18%, rgba(255, 255, 255, 0.56), transparent 52%),
+    linear-gradient(145deg, var(--dampi-teal), #243a36);
+  border: 1.5px solid rgba(255, 255, 255, 0.52);
+  box-shadow: var(--glass-highlight), var(--glass-shadow);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -31,7 +35,7 @@
   font-size: 1.5rem;
   font-weight: 800;
   color: #fff;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .profile__name {
@@ -61,11 +65,14 @@
 }
 
 .profile__info-list {
-  background: #fff;
-  border-radius: 12px;
+  background: var(--glass-bg);
+  border-radius: 22px;
   overflow: hidden;
   margin-bottom: 24px;
-  border: 1px solid rgba(77, 115, 108, 0.06);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-highlight), 0 12px 26px rgba(42, 59, 56, 0.10);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
 }
 
 .profile__info-row {
@@ -83,7 +90,7 @@
 .profile__info-icon {
   width: 32px;
   height: 32px;
-  border-radius: 8px;
+  border-radius: 14px;
   background: rgba(146, 187, 179, 0.12);
   display: flex;
   align-items: center;
@@ -118,9 +125,9 @@
 }
 
 .profile__action-card {
-  background: #fff;
-  border: 1px solid rgba(77, 115, 108, 0.06);
-  border-radius: 12px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
   padding: 16px;
   display: flex;
   align-items: center;
@@ -128,17 +135,21 @@
   cursor: pointer;
   text-align: left;
   width: 100%;
-  transition: background 0.15s ease;
+  box-shadow: var(--glass-highlight), 0 12px 26px rgba(42, 59, 56, 0.10);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .profile__action-card:hover {
-  background: rgba(146, 187, 179, 0.04);
+  transform: translateY(-1px);
+  box-shadow: var(--glass-highlight), var(--glass-shadow);
 }
 
 .profile__action-icon {
   width: 40px;
   height: 40px;
-  border-radius: 10px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;

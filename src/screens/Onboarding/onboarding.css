@@ -1,7 +1,10 @@
 /* ── Onboarding Flow ──────────────────────────────────────── */
 
 .onboarding-flow {
-  background: linear-gradient(180deg, #f8fafa 0%, #f0f5f4 100%);
+  background:
+    radial-gradient(circle at 18% 8%, rgba(123, 194, 212, 0.24), transparent 34%),
+    radial-gradient(circle at 88% 86%, rgba(237, 161, 109, 0.20), transparent 34%),
+    linear-gradient(180deg, #fbfdfc 0%, #f0f5f4 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -58,13 +61,17 @@
 .welcome-logo {
   width: 80px;
   height: 80px;
-  background: rgba(146, 187, 179, 0.2);
-  border-radius: 24px;
+  background: var(--glass-bg-tint);
+  border: 1px solid var(--glass-border);
+  border-radius: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
   color: var(--dampi-teal);
+  box-shadow: var(--glass-highlight), var(--glass-shadow);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
 }
 
 .welcome-title {
@@ -72,7 +79,7 @@
   font-weight: 800;
   color: var(--dampi-teal);
   margin: 0 0 4px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .welcome-subtitle {
@@ -89,11 +96,14 @@
 }
 
 .feature {
-  background: white;
-  border-radius: 18px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
   padding: 20px;
   text-align: center;
-  box-shadow: 0 1px 8px rgba(77, 115, 108, 0.06);
+  box-shadow: var(--glass-highlight), 0 12px 26px rgba(42, 59, 56, 0.10);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,7 +146,7 @@
   font-weight: 800;
   color: var(--dampi-text);
   margin: 0 0 6px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .onboarding-header p {
@@ -161,7 +171,7 @@
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--dampi-text);
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .input-wrapper {
@@ -183,10 +193,10 @@
 .onboarding-select {
   width: 100%;
   padding: 12px 14px 12px 44px;
-  border: 1.5px solid rgba(77, 115, 108, 0.15);
-  border-radius: 14px;
+  border: 1.5px solid var(--glass-border);
+  border-radius: 18px;
   font-size: 0.95rem;
-  background: white;
+  background: var(--glass-bg-strong);
   color: var(--dampi-text);
   transition: all 0.2s ease;
   font-family: inherit;
@@ -233,16 +243,19 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: var(--dampi-teal);
+  background:
+    radial-gradient(ellipse at 26% 12%, rgba(255, 255, 255, 0.42), transparent 58%),
+    linear-gradient(145deg, var(--dampi-teal), #263d39);
   color: white;
   border: none;
-  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 18px;
   padding: 14px 20px;
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 4px 16px rgba(77, 115, 108, 0.25);
+  box-shadow: var(--glass-highlight), var(--shadow-cta);
   letter-spacing: 0.01em;
 }
 
@@ -264,10 +277,10 @@
 }
 
 .onboarding-secondary {
-  background: transparent;
+  background: var(--glass-bg);
   color: var(--dampi-teal);
-  border: 1.5px solid var(--dampi-teal);
-  border-radius: 14px;
+  border: 1.5px solid var(--glass-border);
+  border-radius: 18px;
   padding: 12px 20px;
   font-size: 0.9rem;
   font-weight: 700;
@@ -293,8 +306,9 @@
 
 /* ── Family Info ── */
 .family-info {
-  background: rgba(146, 187, 179, 0.1);
-  border-radius: 18px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
   padding: 20px;
   text-align: center;
   display: flex;
@@ -316,11 +330,14 @@
 
 /* ── Success State ── */
 .success-state {
-  background: white;
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--glass-border);
   border-radius: 24px;
   padding: 40px 24px;
   text-align: center;
-  box-shadow: 0 2px 16px rgba(77, 115, 108, 0.1);
+  box-shadow: var(--glass-highlight), var(--glass-shadow);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -330,7 +347,7 @@
 .success-icon {
   width: 64px;
   height: 64px;
-  background: rgba(146, 187, 179, 0.2);
+  background: var(--glass-bg-tint);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -359,16 +376,18 @@
   position: fixed;
   bottom: 24px;
   left: 20px;
-  background: white;
-  border: 1px solid rgba(77, 115, 108, 0.15);
-  border-radius: 12px;
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
   padding: 10px 14px;
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--dampi-text);
   cursor: pointer;
   transition: all 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--glass-highlight), 0 12px 26px rgba(42, 59, 56, 0.10);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
 }
 
 .onboarding-back:hover {

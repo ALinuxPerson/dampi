@@ -5,8 +5,10 @@
   display: flex;
   flex-direction: column;
   background:
-    linear-gradient(155deg, rgba(146, 187, 179, 0.18) 0%, transparent 32%),
-    linear-gradient(180deg, #fffdfb 0%, var(--dampi-cream) 100%);
+    radial-gradient(circle at 18% 5%, rgba(255, 255, 255, 0.86), transparent 24%),
+    radial-gradient(circle at 88% 12%, rgba(123, 194, 212, 0.26), transparent 30%),
+    radial-gradient(circle at 8% 92%, rgba(237, 161, 109, 0.22), transparent 34%),
+    linear-gradient(180deg, rgba(255, 253, 251, 0.92) 0%, rgba(242, 248, 247, 0.88) 100%);
   overflow: hidden;
 
   /* Center the mobile frame on desktop */
@@ -18,8 +20,8 @@
 /* Subtle border on desktop to frame the mobile shell */
 @media (min-width: 500px) {
   .app-container {
-    box-shadow: 0 0 0 1px rgba(77, 115, 108, 0.1),
-                0 20px 60px rgba(77, 115, 108, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    box-shadow: var(--glass-highlight), 0 24px 70px rgba(42, 59, 56, 0.18);
     border-radius: 28px;
   }
 }

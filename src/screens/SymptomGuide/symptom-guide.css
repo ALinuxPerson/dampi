@@ -1,7 +1,7 @@
 /* ── Symptom Guide Screen ─────────────────────────────────── */
 
 .symptom-guide {
-  background: var(--dampi-cream);
+  background: transparent;
   min-height: 100vh;
   padding: 0 20px;
   color: var(--dampi-text);
@@ -16,14 +16,17 @@
 
 .symptom-guide__search-input {
   width: 100%;
-  background: #fff;
-  border: 1px solid rgba(146, 187, 179, 0.25);
-  border-radius: 10px;
+  background: var(--glass-bg-strong);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
   padding: 12px 16px 12px 40px;
   font-size: 0.85rem;
   color: var(--dampi-text);
   outline: none;
-  transition: border-color 0.15s ease;
+  box-shadow: var(--glass-highlight), 0 12px 26px rgba(42, 59, 56, 0.10);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .symptom-guide__search-input::placeholder {
@@ -32,6 +35,7 @@
 
 .symptom-guide__search-input:focus {
   border-color: var(--dampi-teal);
+  box-shadow: var(--glass-highlight), 0 0 0 4px rgba(146, 187, 179, 0.18), var(--glass-shadow);
 }
 
 .symptom-guide__search-icon {
@@ -62,21 +66,25 @@
 }
 
 .symptom-guide__category-card {
-  background: #fff;
-  border-radius: 12px;
+  background: var(--glass-bg);
+  border-radius: 20px;
   padding: 14px 16px;
   display: flex;
   align-items: center;
   gap: 12px;
   cursor: pointer;
-  border: 1px solid rgba(77, 115, 108, 0.06);
+  border: 1px solid var(--glass-border);
   text-align: left;
   width: 100%;
-  transition: background 0.15s ease;
+  box-shadow: var(--glass-highlight), 0 12px 26px rgba(42, 59, 56, 0.10);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .symptom-guide__category-card:hover {
-  background: rgba(146, 187, 179, 0.04);
+  transform: translateY(-1px);
+  box-shadow: var(--glass-highlight), var(--glass-shadow);
 }
 
 .symptom-guide__dot {
